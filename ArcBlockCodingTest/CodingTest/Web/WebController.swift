@@ -43,7 +43,7 @@ class WebController: UIViewController {
     }
     
     func loadUrl(url: String) {
-        if !url.isUrlFormat {
+        if url.isUrlFormat {
             guard let url = URL(string: url) else { return }
             iWebView.load(URLRequest(url: url))
         } else {
